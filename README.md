@@ -1,5 +1,7 @@
 # @mapbox/parse-mapbox-token
 
+[![Build Status](https://travis-ci.com/mapbox/parse-mapbox-token.svg?token=FB2dZNVWaGo68KZnwz9M&branch=master)](https://travis-ci.com/mapbox/parse-mapbox-token)
+
 Parse a Mapbox API token, **in Node or the browser**.
 
 Learn about Mapbox API tokens by reading [Mapbox's API documentation](https://www.mapbox.com/api-documentation/#tokens).
