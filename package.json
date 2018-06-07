@@ -1,6 +1,6 @@
 {
   "name": "@mapbox/parse-mapbox-token",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Parse a Mapbox API token, in Node or the browser",
   "main": "index.js",
   "scripts": {
