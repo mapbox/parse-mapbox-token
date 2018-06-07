@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.com/mapbox/parse-mapbox-token.svg?token=FB2dZNVWaGo68KZnwz9M&branch=master)](https://travis-ci.com/mapbox/parse-mapbox-token)
 
-Parse a Mapbox API token, **in Node or the browser**.
+Parse a Mapbox API token, in any JS environment, including Node, browser, and React Native.
 
 Learn about Mapbox API tokens by reading [Mapbox's API documentation](https://www.mapbox.com/api-documentation/#tokens).
 
@@ -38,4 +38,4 @@ The following properties may or may not be present:
 - **client:** OAuth client for which the token was granted.
 - **impersonator:** ID of the user impersonating the account owner.
 
-The token's payload is parsed with [`window.atob`](https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/atob) in the browser and with [`Buffer`](https://nodejs.org/api/buffer.html) in Node.
+The token's payload is parsed with [`base-64`](https://github.com/mathiasbynens/base64).
