@@ -1,5 +1,7 @@
 'use strict';
 
+var base64 = require('base-64');
+
 var tokenCache = {};
 
 function parseToken(token) {
@@ -34,18 +36,10 @@ function parseToken(token) {
 
 function parsePaylod(rawPayload) {
   try {
-    if (typeof window !== 'undefined' && window.atob) {
-      return JSON.parse(atob(rawPayload));
-    }
-    if (typeof Buffer !== 'undefined') {
-      return JSON.parse(new Buffer(rawPayload, 'base64').toString());
-    }
+    return JSON.parse(base64.decode(rawPayload));
   } catch (parseError) {
     throw new Error('Invalid token');
   }
-  throw new Error(
-    'Unable to parse in an enviornment without window.atob (browsers) or Buffer (Node)'
-  );
 }
 
 function has(obj, key) {
